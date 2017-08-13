@@ -1,0 +1,13 @@
+环境准备
+
+1.在windows上下载
+
+
+docker-machine ssh default 
+sudo sed -i "s|EXTRA_ARGS='|EXTRA_ARGS='--registry-mirror=加速地址 |g" /var/lib/boot2docker/profile 
+exit 
+docker-machine restart default
+
+sudo sed -i "s|EXTRA_ARGS='|EXTRA_ARGS='--registry-mirror=http://7f17b2fe.m.daocloud.io |g" /var/lib/boot2docker/profile
+
+sudo docker pull registry.cn-hangzhou.aliyuncs.com/kiss_org/kaggle_python

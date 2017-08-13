@@ -8,3 +8,5 @@ def createDateSet():
 	return group,labels
 
 print ("hello world")
+ 
+import matplotlib
